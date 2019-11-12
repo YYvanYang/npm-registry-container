@@ -17,7 +17,8 @@ services:
     restart: unless-stopped
     volumes:
       - "./storage:/verdaccio/storage"
-      - "./conf:/verdaccio/conf"
+      - "./config:/verdaccio/conf"
+      - "./plugins:/verdaccio/plugins"
 networks:
   default:
     external:
