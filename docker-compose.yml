@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  verdaccio:
+    image: verdaccio/verdaccio
+    container_name: "verdaccio"
+    environment:
+      - VERDACCIO_PORT=4873
+      - VIRTUAL_HOST=${DOMAINS}
+      - LETSENCRYPT_HOST=${DOMAINS}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    ports:
+      - "4873:4873"
+    restart: unless-stopped
+    volumes:
+      - "./storage:/verdaccio/storage"
+      - "./conf:/verdaccio/conf"
+networks:
+  default:
+    external:
+      name: ${NETWORK}
