@@ -11,6 +11,9 @@ services:
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     ports:
       - "4873:4873"
+    # expose 是否需要，待验证
+    expose: 
+      - "4873"
     restart: unless-stopped
     volumes:
       - "./storage:/verdaccio/storage"
