@@ -29,3 +29,12 @@ If you use Dokku, an open-source alternative for Heroku, you can run this exampl
 5. Mount the volumes: `dokku storage:mount verdaccio /var/lib/dokku/data/storage/verdaccio/storage:/verdaccio/storage` and `dokku storage:mount verdaccio /var/lib/dokku/data/storage/verdaccio/conf:/verdaccio/conf`
 4. Deploy the docker image `dokku tags:deploy verdaccio v1`
 5. Enjoy the application
+
+
+## Issue
+
+1. 'Error: EACCES: permission denied, open \'/verdaccio/storage/.verdaccio-db.json\'
+solution: 
+```
+chmod 777 -R storage/
+```
