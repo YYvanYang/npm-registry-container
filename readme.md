@@ -35,7 +35,7 @@ If you use Dokku, an open-source alternative for Heroku, you can run this exampl
 
 1. 'Error: EACCES: permission denied, open \'/verdaccio/storage/.verdaccio-db.json\'
 
-solution: 
+solution:
 ```
 chmod 777 -R storage/
 ```
@@ -47,3 +47,6 @@ chmod 777 -R config/htpasswd
 
 ## 如何发布一个npm包
 - [How to make a beautiful, tiny npm package and publish it](https://medium.com/free-code-camp/how-to-make-a-beautiful-tiny-npm-package-and-publish-it-2881d4307f78)
+
+## 入口Docker依赖
+ - https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
