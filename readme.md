@@ -34,7 +34,16 @@ If you use Dokku, an open-source alternative for Heroku, you can run this exampl
 ## Issue
 
 1. 'Error: EACCES: permission denied, open \'/verdaccio/storage/.verdaccio-db.json\'
+
 solution: 
 ```
 chmod 777 -R storage/
 ```
+
+2. 在config目录下添加一个空的htpasswd文件，并添加权限
+```
+chmod 777 -R config/htpasswd
+```
+
+## 如何发布一个npm包
+- [How to make a beautiful, tiny npm package and publish it](https://medium.com/free-code-camp/how-to-make-a-beautiful-tiny-npm-package-and-publish-it-2881d4307f78)
